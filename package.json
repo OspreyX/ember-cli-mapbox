@@ -1,0 +1,23 @@
+{
+  "name": "ember-cli-mapbox",
+  "version": "0.0.2",
+  "description": "ember-cli addon adding support for mapbox.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ember-addon"
+  ],
+  "author": "Chris Santero",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/csantero/ember-cli-mapbox.git"
+  },
+  "dependencies": {
+    "broccoli-merge-trees": "^0.1.4",
+    "broccoli-static-compiler": "^0.1.4"
+  },
+  "devDependencies": {}
+}
