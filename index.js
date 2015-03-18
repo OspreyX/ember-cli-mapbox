@@ -1,3 +1,6 @@
+/* jshint node: true */
+'use strict';
+
 var path = require('path');
 var fs = require('fs');
 var pickFiles = require('broccoli-static-compiler');
@@ -17,7 +20,7 @@ function EmberCLIMapbox(project) {
 
 EmberCLIMapbox.prototype.treeFor = function treeFor(name) {
   var treePath =  path.join('node_modules', 'ember-cli-mapbox', name);
-  
+
   if (fs.existsSync(treePath)) {
     return unwatchedTree(treePath);
   }
