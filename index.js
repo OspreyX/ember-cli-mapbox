@@ -1,6 +1,7 @@
 /* jshint node: true */
 'use strict';
 
+var readConfig = require('./lib/config');
 var path = require('path');
 var fs = require('fs');
 var pickFiles = require('broccoli-static-compiler');
@@ -43,4 +44,12 @@ module.exports = {
       return workingTree;
     }
   },
+
+  contentFor: function(type, config) {
+    return [
+      '<script>',
+      'L.mapbox.accessToken = "' + readConfig().accessToken + '";',
+      '</script>',
+    ];
+  }
 };
