@@ -8,6 +8,10 @@ module.exports = {
   },
 
   afterInstall: function() {
+    this.insertIntoFile('.jshintrc', '    "L",', {
+      after: '"predef": [\n'
+    });
+
     return this.insertIntoFile('.gitignore', '.mapbox');
   },
 };
